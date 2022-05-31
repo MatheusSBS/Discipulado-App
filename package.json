@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MatheusSBS/Discipulado-App/issues"
   },
-  "homepage": "https://github.com/MatheusSBS/Discipulado-App#readme"
+  "homepage": "https://github.com/MatheusSBS/Discipulado-App#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
