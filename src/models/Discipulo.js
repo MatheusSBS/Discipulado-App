@@ -11,7 +11,6 @@ const discipuloSchema = new mongoose.Schema({
     },
     data_de_nascimento: {
         trype: Date,
-        required: true,
     },
     foto: {
         type: String,
