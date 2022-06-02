@@ -1,4 +1,4 @@
-const { res, response } = require('express')
+const { res } = require('express')
 
 const Discipulo = require('../models/Discipulo')
 
@@ -6,9 +6,9 @@ module.exports = {
     async index(req, res) {
         try {
             const discipulos = await Discipulo.find()
-            return response.status(200).json({ discipulos })
+            return res.status(200).json({ discipulos })
         } catch (err) {
-            response.status(500).json({ error: err.message })
+            res.status(500).json({ error: err.message })
         }
     },
 }
