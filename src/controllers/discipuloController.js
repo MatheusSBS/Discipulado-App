@@ -1,5 +1,5 @@
 const { res, response } = require('express')
-
+const { v4: uuid } = require('uuid')
 const Discipulo = require('../models/Discipulo')
 
 module.exports = {
@@ -18,6 +18,14 @@ module.exports = {
         if( !nome || !data_de_nascimento ) {
             return response.status(400).json( error: "Missing nome or data de nascimento.")
         }
+
+        const discipulo = new Discipulo({
+            _id: uuid(),
+            nome,
+            data_de_nascimento,
+            foto,
+            sobre,
+        })
 
     }
 }
