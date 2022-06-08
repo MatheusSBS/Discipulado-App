@@ -26,6 +26,13 @@ module.exports = {
             foto,
             sobre,
         })
+        try {
+            await discipulo.save()
 
-    }
+            return response.status(201).json({message:'Discipulo added succesfully' })
+        } catch {
+            res.status(400).json({ error: err.message })
+        }
+
+    },
 }
